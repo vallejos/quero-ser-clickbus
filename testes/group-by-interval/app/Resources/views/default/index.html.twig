@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <h1>Group by Interval Test</h1>
+
+            <form method="post" action="/results">
+                <div class="form-group">
+                    <label for="range">Range:</label>
+                    <input type="text" class="form-control" id="range" name="range" placeholder="Range" />
+                    <p class="help-block">Example: 10</p>
+                </div>
+                <div class="form-group">
+                    <label for="numberSet">Number Set:</label>
+                    <input type="text" class="form-control" id="numberSet" name="set" placeholder="Number Set" />
+                    <p class="help-block">Example: [10, 1, -20,  14, 99, 136, 19, 20, 117, 22, 93,  120, 131]
+                    or just: 10, 1, -20,  14, 99</p>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+    #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
+    #container { padding: 2em; }
+
+    @media (min-width: 768px) {
+        #wrapper { width: 80%; margin: 2em auto; }
+
+        @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+        @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+        .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
+    }
+</style>
+{% endblock %}

@@ -17,7 +17,7 @@ Exemplos:
  ```
  **Resultado:**  
  ```
- {[-20], [1, 10], [14, 19, 20], [22], [93, 99], [117, 120], [131, 136]}
+ {[-20], [1, 10], [14, 19, 20, 22], [93, 99], [117, 120], [131, 136]}
  ```
 
 * 
@@ -28,7 +28,7 @@ Exemplos:
   ```
   **Resultado:**  
   ```
-  {[-20], [1, 10, 14], [19, 20, 22], [93, 99], [117, 120], [131], [136]}
+  {[-20], [1, 10, 14], [19, 20, 22], [93, 99], [117, 120, 131], [136]}
   ```
 
 * 
@@ -47,3 +47,20 @@ Exemplos:
   ```
   **Resultado:** [Empty Set]
 
+1 Install
+----------
+
+Make sure you have Symfony 2 and Bower installed on the system.
+
+* Install dependencies
+```
+$ composer install
+$ bower install
+```
+
+* Run the server
+```
+php app/console server:run
+```
+
+Open http://127.0.0.1:8000 to try it out.
